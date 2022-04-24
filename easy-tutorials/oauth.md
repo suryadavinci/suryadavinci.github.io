@@ -1,5 +1,8 @@
 # Oauth
 
+## References
+1. [Mozilla wiki](https://wiki.mozilla.org/Privacy/BestPractices/OAuth#Overview_of_OAuth)
+
 ## Parties involved
 1. `Data Host` (ex: Facebook)
 2. `Consumer` (ex: Farmville)
