@@ -1,68 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - LED Banner</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      line-height: 1.6;
-      background: #f5f5f5;
-      color: #333;
-    }
-    h1, h2 {
-      color: #e91e63;
-    }
-    a {
-      color: #e91e63;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Neon Banner - Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #00D9FF;
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.6),
+                         0 0 40px rgba(0, 217, 255, 0.4),
+                         0 0 60px rgba(0, 217, 255, 0.2);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(0, 217, 255, 0.6),
+                             0 0 40px rgba(0, 217, 255, 0.4),
+                             0 0 60px rgba(0, 217, 255, 0.2);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(0, 217, 255, 0.8),
+                             0 0 50px rgba(0, 217, 255, 0.6),
+                             0 0 70px rgba(0, 217, 255, 0.4);
+            }
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 40px;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #00D9FF;
+            font-size: 1.6em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            border-left: 4px solid #00D9FF;
+            padding-left: 15px;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            color: #b0b0b0;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 10px 0;
+            color: #b0b0b0;
+            font-size: 1.05em;
+        }
+
+        strong {
+            color: #00D9FF;
+            font-weight: 600;
+        }
+
+        a {
+            color: #00D9FF;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .content-section {
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
+    <div class="container">
+        <h1>LED Neon Banner</h1>
+        <p class="subtitle">Privacy Policy</p>
+        <p class="last-updated">Last Updated: January 4, 2026</p>
 
-  <section>
-    <p>Last updated: January 4, 2026</p>
-  </section>
+        <div class="content-section">
+            <h2>Introduction</h2>
+            <p>Welcome to LED Neon Banner ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you have a positive experience while using our app. This Privacy Policy explains how we collect, use, and safeguard your information.</p>
 
-  <section>
-    <h2>Information We Collect</h2>
-    <p>Our LED Banner app does not collect any personal data from users. We do not track or store any information about your device or messages.</p>
-  </section>
+            <h2>Information We Collect</h2>
+            <p>LED Neon Banner is designed with your privacy in mind. We collect minimal information:</p>
+            <ul>
+                <li><strong>Device Information:</strong> We may collect basic device information for app functionality and crash reporting.</li>
+                <li><strong>Usage Data:</strong> Anonymous analytics about how you use the app to improve performance and user experience.</li>
+                <li><strong>Ad Tracking (Optional):</strong> With your explicit permission, we collect advertising identifiers for personalized ads. You can opt out at any time through your device settings.</li>
+                <li><strong>In-App Purchases:</strong> Purchase information is processed securely through Apple's App Store. We do not store your payment details.</li>
+            </ul>
 
-  <section>
-    <h2>Data Usage</h2>
-    <p>All messages and banners created within the app remain on your device. We do not upload or share your content with any third parties.</p>
-  </section>
+            <h2>Data Storage</h2>
+            <p>All your banner designs, settings, and customizations are stored locally on your device. We do not store this information on our servers or share it with third parties.</p>
 
-  <section>
-    <h2>Third-Party Services</h2>
-    <p>The app may use third-party tools for analytics or crash reporting, but these services do not collect personal data.</p>
-  </section>
+            <h2>Third-Party Services</h2>
+            <p>Our app uses the following third-party services:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> For displaying advertisements. AdMob may collect certain device and usage information. You can learn more about Google's privacy practices at <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
+                <li><strong>Firebase:</strong> For app analytics and performance monitoring. Firebase data is used to improve app stability and user experience.</li>
+                <li><strong>Apple StoreKit:</strong> For processing in-app purchases securely.</li>
+            </ul>
 
-  <section>
-    <h2>Contact Us</h2>
-    <p>If you have any questions or concerns about your privacy, you can contact us at: <br>
-      Email: <a href="mailto:ggnansuriyan@gmail.com">ggnansuriyan@gmail.com</a><br>
-      Instagram: <a href="https://instagram.com/suryadavinci" target="_blank">@suryadavinci</a>
-    </p>
-  </section>
+            <h2>App Tracking Transparency</h2>
+            <p>We use App Tracking Transparency (ATT) to request your permission before tracking your data across apps and websites. This allows us to:</p>
+            <ul>
+                <li>Show you personalized advertisements</li>
+                <li>Avoid showing you the same ads repeatedly</li>
+            </ul>
+            <p>You can change your tracking preferences at any time in Settings → Privacy & Security → Tracking.</p>
 
-  <section>
-    <h2>Changes to This Policy</h2>
-    <p>We may update this privacy policy occasionally. Any changes will be posted on this page.</p>
-  </section>
+            <h2>Data We Don't Collect</h2>
+            <p>We do not collect:</p>
+            <ul>
+                <li>Personal identification information (name, email, phone number) unless you voluntarily provide it for support</li>
+                <li>Location data</li>
+                <li>Photos or other media from your device</li>
+                <li>Contacts or other sensitive personal information</li>
+            </ul>
 
+            <h2>Children's Privacy</h2>
+            <p>Our app is suitable for all ages. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately.</p>
+
+            <h2>Data Security</h2>
+            <p>We implement appropriate technical and organizational measures to protect your data. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+            <h2>Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access your data stored locally on your device</li>
+                <li>Delete your data by uninstalling the app</li>
+                <li>Opt out of personalized ads through device settings</li>
+                <li>Contact us with privacy concerns</li>
+            </ul>
+
+            <h2>Premium Version</h2>
+            <p>The Premium (Pro) version removes all advertisements from the app. Purchasing Premium does not change our data collection practices, except that ad-related tracking will no longer occur.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last Updated" date at the top of this policy. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:ggnansuriyan@gmail.com">ggnansuriyan@gmail.com</a></li>
+                <li><strong>Instagram:</strong> <a href="https://instagram.com/suryadavinci" target="_blank">@suryadavinci</a></li>
+            </ul>
+
+            <h2>Consent</h2>
+            <p>By using LED Neon Banner, you consent to this Privacy Policy and agree to its terms.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Surya Davinci. All rights reserved.</p>
+            <a href="support.html" class="back-link">Back to Support</a>
+        </div>
+    </div>
 </body>
 </html>
