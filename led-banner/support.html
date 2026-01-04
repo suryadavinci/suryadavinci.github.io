@@ -1,90 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LED Neon Banner Support</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Neon Banner - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    main p {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    a {
-      color: #ff6ec7;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #00D9FF;
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.6),
+                         0 0 40px rgba(0, 217, 255, 0.4),
+                         0 0 60px rgba(0, 217, 255, 0.2);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
 
-    footer {
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      background: rgba(0,0,0,0.5);
-    }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(0, 217, 255, 0.6),
+                             0 0 40px rgba(0, 217, 255, 0.4),
+                             0 0 60px rgba(0, 217, 255, 0.2);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(0, 217, 255, 0.8),
+                             0 0 50px rgba(0, 217, 255, 0.6),
+                             0 0 70px rgba(0, 217, 255, 0.4);
+            }
+        }
 
-    .social {
-      margin-top: 1rem;
-    }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 50px;
+            font-size: 1.1em;
+        }
 
-    .social a {
-      margin: 0 0.5rem;
-      font-size: 1.2rem;
-      display: inline-block;
-      transition: transform 0.2s ease;
-    }
+        .support-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
 
-    .social a:hover {
-      transform: scale(1.2);
-      color: #00ffff;
-    }
+        h2 {
+            color: #00D9FF;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
 
-    .contact-box {
-      background: rgba(255,255,255,0.05);
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(255,0,255,0.2), 0 0 40px rgba(0,255,255,0.2);
-      max-width: 500px;
-      width: 90%;
-    }
-  </style>
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #b0b0b0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(0, 217, 255, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #00D9FF;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(0, 217, 255, 0.1);
+            transform: translateX(10px);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 2em;
+            margin-right: 20px;
+            filter: drop-shadow(0 0 5px rgba(0, 217, 255, 0.5));
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .contact-value {
+            font-size: 1.2em;
+            color: #00D9FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-value:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            color: #00D9FF;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .privacy-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .support-section {
+                padding: 25px;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>LED Neon Banner Support</h1>
-  </header>
+    <div class="container">
+        <h1>LED Neon Banner</h1>
+        <p class="subtitle">Support</p>
 
-  <main>
-    <div class="contact-box">
-      <p>Need help with the app or have feedback? Reach out to me anytime!</p>
-      <p>Email: <a href="mailto:ggnansuriyan@gmail.com">ggnansuriyan@gmail.com</a></p>
+        <div class="support-section">
+            <h2>Need Help?</h2>
+            <p>Need help with the app or have feedback? Reach out to me anytime!</p>
 
-      <div class="social">
-        <p>Follow me on Instagram: <a href="https://instagram.com/suryadavinci" target="_blank">@suryadavinci</a></p>
-      </div>
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-info">
+                    <div class="contact-label">Email</div>
+                    <a href="mailto:ggnansuriyan@gmail.com" class="contact-value">ggnansuriyan@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-info">
+                    <div class="contact-label">Follow me on Instagram</div>
+                    <a href="https://instagram.com/suryadavinci" target="_blank" class="contact-value">@suryadavinci</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Surya Davinci. All rights reserved.</p>
+            <a href="privacy.html" class="privacy-link">Privacy Policy</a>
+        </div>
     </div>
-  </main>
-
-  <footer>
-    &copy; 2026 Surya Davinci. All rights reserved. 
-    <br>
-    <a href="privacy.html">Privacy Policy</a>
-  </footer>
 </body>
 </html>
