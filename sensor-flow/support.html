@@ -325,3 +325,302 @@
       color: var(--text-secondary);
       margin-bottom: 24px;
     }
+
+    .pro-features {
+      list-style: none;
+    }
+
+    .pro-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      font-size: 0.95em;
+    }
+
+    .pro-features li::before {
+      content: '✓';
+      color: var(--status-active);
+      font-weight: bold;
+    }
+
+    .pro-visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .pro-price {
+      text-align: center;
+      padding: 32px;
+      background: var(--bg-primary);
+      border-radius: 16px;
+    }
+
+    .price-amount {
+      font-size: 3em;
+      font-weight: 700;
+    }
+
+    .price-label {
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0 24px;
+      border-top: 1px solid var(--card-border);
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85em;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .pro-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: 2.5em;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero h1 {
+        font-size: 2em;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="#" class="logo">
+        <div class="logo-icon">📊</div>
+        <span class="logo-text">Sensor Flow</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available on App Store</span>
+        </div>
+        <h1>Explore Your iPhone's<br><span>Hidden Sensors</span></h1>
+        <p class="hero-description">
+          Real-time visualization of accelerometer, gyroscope, LiDAR, GPS, magnetometer, and more.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">
+            <span>Download Free</span>
+          </a>
+          <a href="#features" class="btn btn-secondary">
+            <span>Learn More</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Every Sensor, Visualized</h2>
+        
+        <div class="features-grid">
+          <div class="sensor-card">
+            <div class="sensor-header">
+              <div class="sensor-icon" style="color: var(--sensor-accelerometer);">🎯</div>
+              <span class="sensor-title" style="color: var(--sensor-accelerometer);">Accelerometer</span>
+              <div class="sensor-status"></div>
+            </div>
+            <div class="sensor-divider"></div>
+            <p class="sensor-description">Real-time 3D motion tracking with X, Y, Z axis visualization.</p>
+          </div>
+
+          <div class="sensor-card">
+            <div class="sensor-header">
+              <div class="sensor-icon" style="color: var(--sensor-gyroscope);">🌀</div>
+              <span class="sensor-title" style="color: var(--sensor-gyroscope);">Gyroscope</span>
+              <div class="sensor-status"></div>
+            </div>
+            <div class="sensor-divider"></div>
+            <p class="sensor-description">Rotation rate sensing across all three axes.</p>
+          </div>
+
+          <div class="sensor-card">
+            <div class="sensor-header">
+              <div class="sensor-icon" style="color: var(--sensor-lidar);">📡</div>
+              <span class="sensor-title" style="color: var(--sensor-lidar);">LiDAR</span>
+              <div class="sensor-status"></div>
+            </div>
+            <div class="sensor-divider"></div>
+            <p class="sensor-description">Depth scanning with real-time distance measurement.</p>
+          </div>
+
+          <div class="sensor-card">
+            <div class="sensor-header">
+              <div class="sensor-icon" style="color: var(--sensor-location);">📍</div>
+              <span class="sensor-title" style="color: var(--sensor-location);">GPS Location</span>
+              <div class="sensor-status"></div>
+            </div>
+            <div class="sensor-divider"></div>
+            <p class="sensor-description">Coordinates, speed, altitude, and heading data.</p>
+          </div>
+
+          <div class="sensor-card">
+            <div class="sensor-header">
+              <div class="sensor-icon" style="color: var(--sensor-magnetometer);">🧲</div>
+              <span class="sensor-title" style="color: var(--sensor-magnetometer);">Metal Detector</span>
+              <div class="sensor-status"></div>
+            </div>
+            <div class="sensor-divider"></div>
+            <p class="sensor-description">Magnetic field strength detection for finding metal.</p>
+          </div>
+
+          <div class="sensor-card">
+            <div class="sensor-header">
+              <div class="sensor-icon" style="color: var(--sensor-barometer);">🌡️</div>
+              <span class="sensor-title" style="color: var(--sensor-barometer);">Barometer</span>
+              <div class="sensor-status"></div>
+            </div>
+            <div class="sensor-divider"></div>
+            <p class="sensor-description">Atmospheric pressure and altitude changes.</p>
+          </div>
+
+          <div class="sensor-card">
+            <div class="sensor-header">
+              <div class="sensor-icon" style="color: var(--sensor-microphone);">🎤</div>
+              <span class="sensor-title" style="color: var(--sensor-microphone);">Microphone</span>
+              <div class="sensor-status"></div>
+            </div>
+            <div class="sensor-divider"></div>
+            <p class="sensor-description">Real-time audio level monitoring in decibels.</p>
+          </div>
+
+          <div class="sensor-card">
+            <div class="sensor-header">
+              <div class="sensor-icon" style="color: var(--sensor-proximity);">👋</div>
+              <span class="sensor-title" style="color: var(--sensor-proximity);">Proximity</span>
+              <div class="sensor-status"></div>
+            </div>
+            <div class="sensor-divider"></div>
+            <p class="sensor-description">Object detection for near/far sensing.</p>
+          </div>
+
+          <div class="sensor-card">
+            <div class="sensor-header">
+              <div class="sensor-icon" style="color: rgb(102, 194, 163);">⚖️</div>
+              <span class="sensor-title" style="color: rgb(102, 194, 163);">Bubble Level</span>
+              <div class="sensor-status"></div>
+            </div>
+            <div class="sensor-divider"></div>
+            <p class="sensor-description">Precision spirit level for measuring angles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pro-section">
+      <div class="container">
+        <div class="pro-card">
+          <div class="pro-content">
+            <div class="pro-badge">✨ PRO</div>
+            <h2 class="pro-title">Go Ad-Free</h2>
+            <p class="pro-description">
+              Remove all advertisements with a one-time purchase.
+            </p>
+            <ul class="pro-features">
+              <li>Remove all ads permanently</li>
+              <li>Support independent development</li>
+              <li>One-time purchase, lifetime access</li>
+            </ul>
+          </div>
+          <div class="pro-visual">
+            <div class="pro-price">
+              <div class="price-amount">$9.99</div>
+              <div class="price-label">One-time purchase</div>
+              <a href="#" class="btn btn-primary">Upgrade to Pro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <a href="#" class="logo">
+          <div class="logo-icon">📊</div>
+          <span class="logo-text">Sensor Flow</span>
+        </a>
+        <div class="footer-links">
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="mailto:ggnansuriyan@gmail.com">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Surya Davinci. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
