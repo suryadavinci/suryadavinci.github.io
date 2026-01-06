@@ -1,429 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Sensor Flow</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f7;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            min-height: 100vh;
-        }
-        
-        header {
-            text-align: center;
-            padding: 40px 0;
-            border-bottom: 1px solid #e5e5e7;
-        }
-        
-        .app-icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3em;
-        }
-        
-        h1 {
-            font-size: 2.5em;
-            font-weight: 700;
-            color: #1d1d1f;
-            margin-bottom: 10px;
-        }
-        
-        .tagline {
-            font-size: 1.2em;
-            color: #6e6e73;
-            font-weight: 500;
-        }
-        
-        .content {
-            padding: 40px 0;
-        }
-        
-        h2 {
-            font-size: 1.8em;
-            color: #1d1d1f;
-            margin: 40px 0 20px;
-            font-weight: 600;
-        }
-        
-        h3 {
-            font-size: 1.3em;
-            color: #1d1d1f;
-            margin: 30px 0 15px;
-            font-weight: 600;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            color: #1d1d1f;
-        }
-        
-        ul {
-            margin: 15px 0 15px 30px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-            color: #1d1d1f;
-        }
-        
-        .faq-item {
-            background: #f5f5f7;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .faq-item h3 {
-            margin-top: 0;
-            color: #007aff;
-            font-size: 1.1em;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .feature-card {
-            background: #f5f5f7;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        
-        .feature-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-        
-        .feature-title {
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            color: #1d1d1f;
-        }
-        
-        .contact-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 40px 0;
-        }
-        
-        .contact-box h2 {
-            color: white;
-            margin-top: 0;
-        }
-        
-        .contact-box a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2em;
-            border-bottom: 2px solid white;
-            padding-bottom: 2px;
-        }
-        
-        .contact-box a:hover {
-            opacity: 0.8;
-        }
-        
-        .requirements {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .pro-feature {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        
-        .pro-feature h3 {
-            color: white;
-            margin-top: 0;
-        }
-        
-        a {
-            color: #007aff;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px 0 20px;
-            border-top: 1px solid #e5e5e7;
-            color: #86868b;
-            font-size: 0.9em;
-        }
-        
-        footer a {
-            color: #86868b;
-            margin: 0 10px;
-        }
-        
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-            
-            h2 {
-                font-size: 1.5em;
-            }
-            
-            .container {
-                padding: 15px;
-            }
-            
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="app-icon">📊</div>
-            <h1>Sensor Flow</h1>
-            <div class="tagline">Real-Time Device Sensor Dashboard</div>
-        </header>
-        
-        <div class="content">
-            <section>
-                <h2>Welcome to Sensor Flow Support</h2>
-                <p>Sensor Flow transforms your iPhone into a comprehensive sensor monitoring station. Access real-time data from all of your device's built-in sensors including motion sensors, environmental sensors, GPS, and advanced features like LiDAR depth scanning.</p>
-            </section>
-            
-            <section>
-                <h2>Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <div class="feature-title">Motion Sensors</div>
-                        <p>Accelerometer, gyroscope, and magnetometer with real-time 3D visualization</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🌡️</div>
-                        <div class="feature-title">Environment</div>
-                        <p>Barometer, altitude, ambient light, and proximity detection</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📡</div>
-                        <div class="feature-title">LiDAR Scanner</div>
-                        <p>Advanced depth sensing and distance measurement (iPhone 12 Pro+)</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🧭</div>
-                        <div class="feature-title">Location & GPS</div>
-                        <p>Coordinates, speed, altitude, heading, and accuracy data</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎤</div>
-                        <div class="feature-title">Audio Levels</div>
-                        <p>Real-time sound level metering in decibels (dB)</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🧲</div>
-                        <div class="feature-title">Metal Detector</div>
-                        <p>Magnetic field strength detection for finding metal objects</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section>
-                <h2>System Requirements</h2>
-                <div class="requirements">
-                    <ul>
-                        <li><strong>iOS Version:</strong> iOS 17.0 or later</li>
-                        <li><strong>Devices:</strong> iPhone and iPad</li>
-                        <li><strong>LiDAR Features:</strong> Requires iPhone 12 Pro, iPhone 13 Pro, iPhone 14 Pro, iPhone 15 Pro, or iPad Pro (2020+)</li>
-                        <li><strong>Storage:</strong> Minimal space required (~15 MB)</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <section>
-                <h2>Frequently Asked Questions</h2>
-                
-                <div class="faq-item">
-                    <h3>Q: Why do I need to grant permissions?</h3>
-                    <p><strong>A:</strong> Sensor Flow requires permissions to access device sensors. The app requests only the permissions necessary for displaying sensor data:</p>
-                    <ul>
-                        <li><strong>Camera:</strong> For LiDAR and depth sensing features</li>
-                        <li><strong>Location:</strong> For GPS coordinates, speed, and altitude</li>
-                        <li><strong>Microphone:</strong> For audio level monitoring</li>
-                        <li><strong>Motion:</strong> For accelerometer and gyroscope data</li>
-                    </ul>
-                    <p>You can manage permissions in iOS Settings → Sensor Flow.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Q: Is my data being collected or shared?</h3>
-                    <p><strong>A:</strong> No. All sensor data is processed locally on your device in real-time and is never transmitted to our servers. We do not collect, store, or share your sensor data. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Q: Why doesn't LiDAR work on my device?</h3>
-                    <p><strong>A:</strong> LiDAR scanning requires a device with a LiDAR sensor. Compatible devices include iPhone 12 Pro and later Pro models, and iPad Pro (2020 and later). Standard iPhone models do not have LiDAR hardware.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Q: Why is the app draining my battery?</h3>
-                    <p><strong>A:</strong> Sensor Flow continuously reads and displays real-time sensor data, which requires active processing. To conserve battery:</p>
-                    <ul>
-                        <li>Close the app when not in use (sensors automatically stop)</li>
-                        <li>Reduce screen brightness</li>
-                        <li>Disable sensors you're not actively monitoring</li>
-                        <li>Use Low Power Mode in iOS Settings</li>
-                    </ul>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Q: How accurate are the sensor readings?</h3>
-                    <p><strong>A:</strong> Sensor Flow displays raw data directly from Apple's sensor APIs. Accuracy depends on your device's hardware calibration and environmental conditions. For precise scientific measurements, consider professional-grade equipment.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Q: Can I export or record sensor data?</h3>
-                    <p><strong>A:</strong> The current version displays real-time data only. Data export and recording features may be added in future updates based on user feedback.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Q: How does the Metal Detector feature work?</h3>
-                    <p><strong>A:</strong> The Metal Detector mode uses your device's magnetometer to detect changes in magnetic field strength. When metal objects are nearby, the magnetic field increases. This feature works best with ferromagnetic metals (iron, steel, nickel).</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Q: What does the Bubble Level show?</h3>
-                    <p><strong>A:</strong> The Bubble Level uses accelerometer data to show your device's tilt in degrees. It helps you align surfaces horizontally or vertically, similar to a traditional carpenter's level.</p>
-                </div>
-            </section>
-            
-            <section>
-                <div class="pro-feature">
-                    <h3>🌟 Sensor Flow Pro</h3>
-                    <p>Upgrade to Pro for the best experience:</p>
-                    <ul>
-                        <li>✓ Remove all advertisements</li>
-                        <li>✓ Unlock premium themes</li>
-                        <li>✓ Priority support</li>
-                        <li>✓ One-time purchase, lifetime access</li>
-                    </ul>
-                    <p style="margin-top: 20px;"><strong>Price:</strong> $9.99 USD (one-time purchase)</p>
-                    <p style="font-size: 0.9em; opacity: 0.9;">Available as an in-app purchase within the app.</p>
-                </div>
-            </section>
-            
-            <section>
-                <h2>Troubleshooting</h2>
-                
-                <h3>App Crashes or Freezes</h3>
-                <ul>
-                    <li>Force quit the app and restart it</li>
-                    <li>Restart your iPhone/iPad</li>
-                    <li>Ensure you're running the latest version from the App Store</li>
-                    <li>Check that you have sufficient storage space</li>
-                </ul>
-                
-                <h3>Sensor Not Displaying Data</h3>
-                <ul>
-                    <li>Check that permissions are granted in iOS Settings → Sensor Flow</li>
-                    <li>Verify your device supports the sensor (e.g., LiDAR requires Pro models)</li>
-                    <li>Try toggling the sensor permission off and back on</li>
-                    <li>Restart the app</li>
-                </ul>
-                
-                <h3>Location Not Updating</h3>
-                <ul>
-                    <li>Ensure Location Services are enabled: Settings → Privacy & Security → Location Services</li>
-                    <li>Grant "While Using the App" permission to Sensor Flow</li>
-                    <li>Check that you have a clear view of the sky (GPS requires satellite visibility)</li>
-                    <li>Wait 30-60 seconds for initial GPS lock</li>
-                </ul>
-                
-                <h3>In-App Purchase Issues</h3>
-                <ul>
-                    <li>Verify you're signed into your Apple ID</li>
-                    <li>Check your internet connection</li>
-                    <li>Restart the app to restore purchases</li>
-                    <li>If purchase didn't unlock Pro, tap "Restore Purchase" in Settings</li>
-                    <li>Contact Apple Support for App Store billing issues</li>
-                </ul>
-            </section>
-            
-            <section>
-                <h2>Feedback & Feature Requests</h2>
-                <p>We're constantly improving Sensor Flow based on your feedback! If you have suggestions for new features, sensors, or improvements, please reach out.</p>
-                <p><strong>Planned Features:</strong></p>
-                <ul>
-                    <li>Data export and CSV logging</li>
-                    <li>Custom dashboard layouts</li>
-                    <li>Widgets for Lock Screen and Home Screen</li>
-                    <li>Apple Watch companion app</li>
-                    <li>Additional theme options</li>
-                </ul>
-            </section>
-            
-            <div class="contact-box">
-                <h2>Need More Help?</h2>
-                <p style="margin: 20px 0;">We're here to help! Contact our support team:</p>
-                <p><a href="mailto:support@sensorflow.app">support@sensorflow.app</a></p>
-                <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.9;">We typically respond within 24-48 hours.</p>
-            </div>
-            
-            <section>
-                <h2>Version Information</h2>
-                <p><strong>Current Version:</strong> 1.0</p>
-                <p><strong>Last Updated:</strong> January 2025</p>
-                <p><strong>Compatibility:</strong> iOS 17.0+</p>
-            </section>
-        </div>
-        
-        <footer>
-            <p>&copy; 2025 Sensor Flow. All rights reserved.</p>
-            <p>
-                <a href="privacy.html">Privacy Policy</a> |
-                <a href="support.html">Support</a> |
-                <a href="mailto:support@sensorflow.app">Contact</a>
-            </p>
-        </footer>
-    </div>
-</body>
-</html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensor Flow - Real-Time Device Sensor Dashboard</title>
+  <style>
+    :root {
+      /* Standard Theme - Light Mode */
+      --bg-primary: #F2F2F7;
+      --bg-card: #FFFFFF;
+      --card-border: #E5E5EA;
+      --text-primary: #1C1C1E;
+      --text-secondary: #8E8E93;
+      
+      /* Sensor Colors from app */
+      --sensor-accelerometer: rgb(89, 199, 250);
+      --sensor-gyroscope: rgb(176, 117, 250);
+      --sensor-magnetometer: rgb(250, 117, 117);
+      --sensor-barometer: rgb(117, 209, 140);
+      --sensor-location: rgb(250, 184, 89);
+      --sensor-proximity: rgb(250, 217, 94);
+      --sensor-microphone: rgb(250, 133, 191);
+      --sensor-lidar: rgb(140, 217, 250);
+      
+      /* Status Colors */
+      --status-active: rgb(89, 217, 140);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-primary: #000000;
+        --bg-card: #1C1C1E;
+        --card-border: #38383A;
+        --text-primary: #FFFFFF;
+        --text-secondary: #8E8E93;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(242, 242, 247, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      nav {
+        background: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--sensor-accelerometer), var(--sensor-gyroscope));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1em;
+    }
+
+    .logo-text {
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.95em;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--sensor-accelerometer);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 140px 0 80px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--card-border);
+      border-radius: 100px;
+      font-size: 0.85em;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--status-active);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--sensor-accelerometer), var(--sensor-gyroscope));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      font-size: 1.25em;
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin: 0 auto 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 1em;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--text-primary);
+      color: var(--bg-primary);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.85;
+      transform: scale(1.02);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--card-border);
+    }
+
+    /* Features Grid */
+    .features {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    /* Sensor Card - matching app SensorCardView */
+    .sensor-card {
+      background: var(--bg-card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .sensor-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .sensor-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .sensor-icon {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1em;
+    }
+
+    .sensor-title {
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+
+    .sensor-status {
+      margin-left: auto;
+      width: 8px;
+      height: 8px;
+      background: var(--status-active);
+      border-radius: 50%;
+    }
+
+    .sensor-divider {
+      height: 1px;
+      background: var(--card-border);
+      margin: 12px 0;
+    }
+
+    .sensor-description {
+      font-size: 0.9em;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Pro Section */
+    .pro-section {
+      padding: 60px 0;
+    }
+
+    .pro-card {
+      background: var(--bg-card);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .pro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: linear-gradient(135deg, var(--sensor-gyroscope), var(--sensor-microphone));
+      border-radius: 100px;
+      font-size: 0.8em;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .pro-title {
+      font-size: 1.8em;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .pro-description {
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
